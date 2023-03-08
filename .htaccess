@@ -1,6 +1,6 @@
-< IfModule mod_reescribir.c>
-Motor de reescritura encendido
-Reescribir Base /
-RewriteCond  %{REQUEST_URI}  !/público
-Regla de reescritura  ^(.*)$  público/$1
-</ SiMódulo >
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_URI} !/public
+    RewriteRule ^(.*)$ public/$1
+</IfModule>
